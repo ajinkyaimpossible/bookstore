@@ -76,8 +76,10 @@ TEMPLATES = [
 WSGI_APPLICATION = 'bookstore.wsgi.application'
 
 AUTHENTICATION_BACKENDS = (
-   'social.backends.facebook.FacebookOAuth2',
-   'django.contrib.auth.backends.ModelBackend',
+    'social.backends.facebook.FacebookOAuth2',
+    'social.backends.google.GoogleOAuth2',
+    'social.backends.linkedin.LinkedinOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
 )
 
 
@@ -137,3 +139,11 @@ DEFAULT_FROM_EMAIL = "books@mysterybooks.com"
 #Social Login Facebook
 SOCIAL_AUTH_FACEBOOK_KEY = '1961389957428614'
 SOCIAL_AUTH_FACEBOOK_SECRET ='55f3ecf43e975a8485d3d86f02864e3e'
+
+#Social Login Google
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY ='926520180790-j5b10nmcamfkgb65h7pb99b49a1u9dvm.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET='ycToHskX1nQq7s2FupkpBuSt'
+
+#Social LOgin Linkedin
+SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY = '81rx0a9m9mykoq'
+SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET = 'LPJkC9Vona710KJR'
