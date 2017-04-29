@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social.apps.django_app.default',
     'registration',
     'store',
 )
@@ -65,12 +66,19 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social.apps.django_app.context_processors.backends',
+                'social.apps.django_app.context_processors.login_redirect',
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'bookstore.wsgi.application'
+
+AUTHENTICATION_BACKENDS = (
+   'social.backends.facebook.FacebookOAuth2',
+   'django.contrib.auth.backends.ModelBackend',
+)
 
 
 # Database
@@ -126,3 +134,6 @@ DEFAULT_FROM_EMAIL = "books@mysterybooks.com"
 #EMAIL_PORT = 465
 #EMAIL_USE_TLS = False
 
+#Social Login Facebook
+SOCIAL_AUTH_FACEBOOK_KEY = '1961389957428614'
+SOCIAL_AUTH_FACEBOOK_SECRET ='55f3ecf43e975a8485d3d86f02864e3e'
