@@ -2,12 +2,14 @@
 {% load staticfiles %}
 {% load bootstrap3 %}
 {% load bootstrap_themes %}
+{% load compress %}
 {% bootstrap_styles theme='simplex' type='min.css' %}
 {% block bootstrap3_extra_head %}
 
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
+{% compress css %}
 <link href="{% static 'base/css/style.css' %}" rel="stylesheet" type="text/css">
-
+{% endcompress %}
 {% endblock %}
 {% block bootstrap3_title %}
     {% block title %}
@@ -69,7 +71,7 @@
 
     <div class="row text-center navbar footer">
         <div class="col-md-12">
-            <p> 2015 Ajiinkya Books</p>
+            <p>  Ajiinkya Books | 2017@codepicker.in All Rights Reserved </p>
         </div>
     </div>
 
