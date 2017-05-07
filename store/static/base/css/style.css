@@ -151,107 +151,9 @@ img.bg {
   }
 }
 
-/* Storefront styles */
 
-.storefront_book_display {
-    width: 200px;
-    display: inline-block;
-    text-align: center;
-}
 
-.storefront_book_title {
-    font-size: 14px;
-    display: block;
-    font-weight: bold;
-}
 
-.storefront_book_author {
-    font-size: 11px;
-    display: block;
-}
-.storefront_add_to_cart {
-    display: block;
-    margin-top: 10px;
-}
-
-/* Book detail styles */
-.detail_book_display {
-    text-align: center;
-    margin-top: 20px;
-}
-.detail_book_img {
-    margin-bottom: 20px;
-}
-.detail_book_title {
-    font-size: 20px;
-    display: block;
-    font-weight: bold;
-}
-.detail_book_author {
-    font-size: 16px;
-    display: block;
-}
-.detail_book_description {
-    text-align: left;
-    margin-top: 20px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
-.detail_book_reviews_title {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 20px;
-    display:block;
-    font-weight: bold;
-}
-.detail_book_reviews_map {
-    width: 500px;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-/* Cart Styles */
-.cart_container {
-		display: block;
-		max-width: 750px;
-		margin-left: auto;
-		margin-right: auto;
-}
-.cart_item {
-		width: 100%;
-		margin-top: 20px;
-		display: block;
-		border-bottom: 1px solid black;
-		padding-bottom: 20px;
-}
-.cart_listing {
-		display: inline-block;
-		width: 50%;
-}
-.cart_listing .title {
-		display: block;
-		font-weight: bold;
-}
-.cart_price {
-		display: inline-block;
-		text-align: right;
-		width: 49%;
-		vertical-align: top;
-}
-.cart_value {
-		font-weight: bold;
-}
-.cart_quantity {
-		display: block;
-}
-.cart_total {
-		text-align: right;
-		margin-top: 20px;
-}
 /* Storefront style*/
 .storefront_book_display{
 width: 200px;
@@ -296,3 +198,125 @@ font-size:20px;
 display:block;
 font-weight:bold;
 }
+.storefront_add_to_cart{
+display:block;
+margin-top:px;
+}
+
+
+
+
+
+
+/* Cart Styles */
+.cart_container {
+	display: block;
+	max-width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.cart_item {
+	width: 100%;
+	margin-top: 20px;
+	display: block;
+	border-bottom: 1px solid black;
+	padding-bottom: 20px;
+}
+.cart_listing {
+	display: inline-block;
+	width: 50%;
+}
+.cart_listing .title {
+	display: block;
+	font-weight: bold;
+}
+.cart_price {
+	display: inline-block;
+	text-align: right;
+	width: 49%;
+	vertical-align: top;
+}
+.cart_value {
+	font-weight: bold;
+}
+.cart_quantity {
+	display: block;
+}
+.cart_total {
+	text-align: right;
+	margin-top: 20px;
+}
+
+/* Book detail styles */
+.detail_book_display {
+    text-align: center;
+    margin-top: 20px;
+}
+.detail_book_img {
+    margin-bottom: 20px;
+}
+.detail_book_title {
+    font-size: 20px;
+    display: block;
+    font-weight: bold;
+}
+.detail_book_author {
+    font-size: 16px;
+    display: block;
+}
+.detail_book_description {
+    text-align: left;
+    margin-top: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.detail_book_reviews_title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    display:block;
+    font-weight: bold;
+}
+.detail_book_reviews_map {
+    width: 500px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+/* Storefront styles */
+
+.storefront_book_display {
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+}
+
+.storefront_book_title {
+    font-size: 14px;
+    display: block;
+    font-weight: bold;
+}
+
+.storefront_book_author {
+    font-size: 11px;
+    display: block;
+}
+.storefront_add_to_cart {
+    display: block;
+    margin-top: 10px;
+}
+
+
+
+
+

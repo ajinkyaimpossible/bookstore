@@ -147,4 +147,17 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+#SQL.lite Database3
+*.sqlite3
 
+#Compiled static assets
+static/
+static/CACHE/css/4a22b58a43ee.css
+static/CACHE/css/620c9e186b38.css
+static/CACHE/css/8dccb7b6d9c6.css
+static/CACHE/css/a814ad9cdb82.css
+static/CACHE/css/cf1631e3d479.css
+store/migrations/0005_auto_20170506_1603.py
+store/migrations/0006_auto_20170506_1615.py
+store/migrations/0007_auto_20170506_1626.py
+store/migrations/0008_auto_20170507_0223.py
