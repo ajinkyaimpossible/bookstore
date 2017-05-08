@@ -71,6 +71,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'social.apps.django_app.context_processors.backends',
                 'social.apps.django_app.context_processors.login_redirect',
+                'django.template.context_processors.media'
             ],
         },
     },
@@ -123,6 +124,12 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
 
 )
+
+# Upload Book Images
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_URL = "/media/"
+
 # Registration
 ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_AUTO_LOGIN = True
@@ -131,29 +138,30 @@ LOGIN_REDIRECT_URL ='/store/'
 # Email Settings
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'ajinkyaimpossible@gmail.com'
-EMAIL_HOST_PASSWORD ='ajinkyaslover@98'
-EMAIL_PORT = 587
+EMAIL_HOST = 'mail.codepicker.in '
+EMAIL_HOST_USER = 'ajinkyaimpossible@codepicker.in'
+EMAIL_HOST_PASSWORD = 'ajinkyaas@987'
+EMAIL_PORT = 465
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = "books@mysterybooks.com"
+DEFAULT_FROM_EMAIL = "ajinkyaimpossible@codepicker.in"
 
-#EMAIL_HOST = 'mail.codepicker.in'
-#EMAIL_HOST_USER = 'ajinkyaimpossible@codepicker.in'
-#EMAIL_HOST_PASSWORD = 'ajinkyaas@987'
-#DEFAULT_FROM_EMAIL = 'ajinkyaimpossible@codepicker.in'
-#SERVER_EMAIL = 'ajinkyaimpossible@codepicker.in'
-#EMAIL_PORT = 465
-#EMAIL_USE_TLS = False
+# EMAIL_HOST = 'mail.codepicker.in'
+# EMAIL_HOST_USER = 'ajinkyaimpossible@codepicker.in'
+# EMAIL_HOST_PASSWORD = 'ajinkyaas@987'
+# DEFAULT_FROM_EMAIL = 'ajinkyaimpossible@codepicker.in'
+# SERVER_EMAIL = 'ajinkyaimpossible@codepicker.in'
+# EMAIL_PORT = 465
+# EMAIL_USE_TLS = False
 
-#Social Login Facebook
+# Social Login Facebook
 SOCIAL_AUTH_FACEBOOK_KEY = '1961389957428614'
 SOCIAL_AUTH_FACEBOOK_SECRET ='55f3ecf43e975a8485d3d86f02864e3e'
 
-#Social Login Google
+# Social Login Google
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY ='926520180790-j5b10nmcamfkgb65h7pb99b49a1u9dvm.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET='ycToHskX1nQq7s2FupkpBuSt'
 
-#Social LOgin Linkedin
+# Social LOgin Linkedin
 SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY = '81rx0a9m9mykoq'
 SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET = 'LPJkC9Vona710KJR'
+
