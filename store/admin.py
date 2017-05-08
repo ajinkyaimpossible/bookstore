@@ -9,6 +9,7 @@ class BookAdmin(admin.ModelAdmin):
 class AuthorAdmin(admin.ModelAdmin):
     list_display = ('last_name', 'first_name')
 
+
 class BookOrderAdmin(admin.ModelAdmin):
     list_display = ('book', 'cart', 'quantity')
 
