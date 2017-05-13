@@ -131,17 +131,29 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = "/media/"
 
 # Registration
+
 ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_AUTO_LOGIN = True
-LOGIN_REDIRECT_URL ='/store/'
+LOGIN_REDIRECT_URL = '/store/'
+
+
+
+
+
+
+
+
+
+
 
 # Email Settings
 
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'mail.codepicker.in '
-EMAIL_HOST_USER = 'ajinkyaimpossible@codepicker.in'
-EMAIL_HOST_PASSWORD = 'ajinkyaas@987'
-EMAIL_PORT = 465
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_HOST_USER = 'postmaster@sandboxea138e2080d44f4db1eb8b31f7d8a32f.mailgun.org'
+EMAIL_HOST_PASSWORD = '9abf17c89ab1557b125f5075d167cc3'
+EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = "ajinkyaimpossible@codepicker.in"
 

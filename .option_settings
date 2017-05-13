@@ -1,0 +1,2 @@
+ws:elasticbeanstalk:container:python:
+    WSGIPath: ebd

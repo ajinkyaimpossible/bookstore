@@ -4,10 +4,15 @@ from django.core.urlresolvers import reverse
 from django.utils import timezone
 import paypalrestsdk
 
+from django.core.mail import EmailMultiAlternatives
+from django.core import mail
+from django.template import Context
+from django.template.loader import render_to_string
+
 from .models import Book, BookOrder, Cart, Review
 from .forms import ReviewForm
 
-
+import string, random
 def index(request):
     return render(request, 'template.html')
 
@@ -36,6 +41,23 @@ def book_details(request, book_id):
                     text= form.cleaned_data.get('text')
                 )
                 new_review.save()
+
+                if Review.objects.filter(user=request.user).count() < 6:
+                    subject = 'Your AjinkyasBooks.com discount code is here!'
+                    from_email = 'ajinkyaimpossible@codepicker.in'
+                    to_email = [request.user.email]
+
+                    email_context = Context({
+                        'username': request.user.username,
+                        'code': ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(6)),
+                        'discount': 10
+                    })
+                    text_email = render_to_string('email/review_email.txt', email_context)
+                    html_email = render_to_string('email/review_email.html', email_context)
+                    msg = EmailMultiAlternatives(subject, text_email, from_email, to_email)
+                    msg.attach_alternative(html_email, 'text/html')
+                    msg.content_subtype = 'html'
+                    msg.send()
         else:
             if Review.objects.filter(user=request.user, book=context['book']).count() == 0:
                 form =ReviewForm()
